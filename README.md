@@ -1,2 +1,1 @@
-My favorite drink is coke
-
+Class projects for Beginning Web Programming
