@@ -14,7 +14,7 @@ const principal = Number(prompt("Enter the principal amount:"));
 // Step 3: Get the interest and store it in a variable as a number
 const rate = Number(prompt("Enter the rate of interest:"));
 
-// Step 4: Get the years and and store it in a variable as a number
+// Step 4: Get the years and store it in a variable as a number
 const time = Number(prompt("Enter the time in years:"));
 
 // Step 5: Calculate the interest with user defined variables and store results
