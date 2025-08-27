@@ -8,16 +8,16 @@ function calculateSimpleInterest(principal, rate, time) {
     return (principal * rate * time) / 100;
 }
 
-// Step 2: Get the principal and store it in variable as a number
+// Step 2: Get the principal from user input and store it in variable as a number
 const principal = Number(prompt("Enter the principal amount:"));
 
-// Step 3: Get the interest and store it in a variable as a number
+// Step 3: Get the interest from user input and store it in a variable as a number
 const rate = Number(prompt("Enter the rate of interest:"));
 
-// Step 4: Get the years and store it in a variable as a number
+// Step 4: Get the years from user input and store it in a variable as a number
 const time = Number(prompt("Enter the time in years:"));
 
-// Step 5: Calculate the interest with user defined variables and store results
+// Step 5: Calculate the interest with user defined variables and store results in intererst variable
 const interest = calculateSimpleInterest(principal, rate, time);
 
 // Step 6: Print the results to the console
