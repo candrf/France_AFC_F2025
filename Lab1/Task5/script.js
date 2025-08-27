@@ -32,6 +32,6 @@ if (Number.isNaN(celsius)) {
     // Step 7: Call function to classify temp, store result to string
     const classification = classifyTemperature(celsius);
 
-    // Step 8: Output reults to console
+    // Step 8: Output results to console
     console.log("The temperature is:", classification);
 }
