@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Now Hiring</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="icon" href="images/burger-favicon.jpg" type="image/png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <nav class="navbar navbar-expand-lg bg-black">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="images/neon-burger-brand.webp" alt="burger brand" class="img-fluid">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav neonderthaw-regular">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="menu.html">Menu</a>
+                    <a class="nav-link active" aria-current="page" href="#">Hiring</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+        <h1>Employment Application</h1>
+
+        <form action="" method="get">
+                <label for="fname">First Name:</label>
+                <input type="text" name="fname" id="fname"
+                        minlength="1" maxlength="20" required>
+                <br>
+                <label for="lname">Last Name:</label>
+                <input type="text" name="lname" id="lname"
+                        minlength="1" maxlength="20">
+                <br>
+                <label for="address1">Address 1:</label>
+                <input type="text" name="address1" id="address1"
+                        required>
+                <br>
+                <label for="address2">Address 2:</label>
+                <input type="text" name="address1" id="address2">
+                <br>
+                <label for="city">City:</label>
+                <input type="text" name="city" id="city"
+                        maxlength="29" required>
+
+                <label for="state">State:</label>
+                <select name="state" id="state">
+                    <option value="TX">TX</option>
+                    <option value="OK">OK</option>
+                    <option value="GA">GA</option>
+                </select>
+                <br>
+                <label for="age">Age:</label>
+                <input type="number" name="age" id="age"
+                        min="21" max="99" required>
+                <br>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" name="phone" id="phone"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                        placeholder="Format: 123-456-7891"
+                        required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password"
+                       pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]).{8,12}$"
+                       required>
+                <br>
+                <label>Are you married?:
+                    <input type="radio" name="isMarried" value="Yes" >Yes
+                    <input type="radio" name="isMarried" value="No" checked>No
+                    <input type="radio" name="isMarried" value="It's Complicated">It's Complicated
+                </label>
+                <br>
+                <label>Favorite Color:
+                    <input type="checkbox" name="colors" value="red">Red
+                    <input type="checkbox" name="colors" value="green">Green
+                    <input type="checkbox" name="colors" value="blue">Blue
+                    <input type="checkbox" name="colors" value="indigo">Indigo
+                    <input type="checkbox" name="colors" value="violet">Violet
+                </label>
+                <br>
+                <label for="moreInfo">Enter more information about yourself</label>
+                <br>
+                <textarea name="moreInfo" id="moreInfo" rows="4" maxlength="30"></textarea>
+                <br>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+        </form>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </body>
+</html>
