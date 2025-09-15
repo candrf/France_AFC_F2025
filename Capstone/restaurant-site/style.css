@@ -1,4 +1,4 @@
-/* Style is dark retro vibe, like a set in Stranger Things.
+/* Style is dark retro vibe, like diner out of Stranger Things.
 Backgrounds are dark theme/black.
 Texts and images are bright neon sign styling*/
 
@@ -9,22 +9,21 @@ Texts and images are bright neon sign styling*/
     box-sizing: border-box;
 }
 
-/* neonderthaw Google font with custom styling for neon effect*/
-
-.neonderthaw-regular {
-    font-family: "Neonderthaw", cursive;
+/* tilt-neon Google font with custom styling for neon glow effect*/
+.tilt-neon {
+    font-family: "Tilt Neon", sans-serif;
+    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-size: 40px;
     text-shadow:
             0 0 5px #fff,
-            0 0 8px #0ff,      /* light cyan inner glow */
+            0 0 8px #0ff,
             0 0 10px #0ff,
             0 0 20px #0ff,
-            0 0 40px #0088ff,  /* deeper blue outer glow */
+            0 0 40px #0088ff,
             0 0 80px #0088ff,
-            0 0 100px #0044ff; /* darkest blue farthest out */
-
+            0 0 100px #0044ff;
 }
 body{
     position: relative;
