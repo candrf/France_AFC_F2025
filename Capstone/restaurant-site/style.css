@@ -25,6 +25,31 @@ Texts and images are bright neon sign styling*/
             0 0 80px #0088ff,
             0 0 100px #0044ff;
 }
+.tilt-neon-h1 {
+    font-family: "Tilt Neon", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    color: white;
+    text-shadow:
+            0 0 10px #ff00ff,
+            0 0 20px #ff00ff,
+            0 0 40px #ff00ff,
+            0 0 80px #ff00ff;
+}
+.tilt-neon-p {
+    font-family: "Tilt Neon", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    color: white;
+    text-shadow:
+            0 0 10px #ff00ff,
+            0 0 20px #ff00ff,
+            0 0 40px #ff00ff
+}
 body{
     position: relative;
     min-height: 100vh;
@@ -56,4 +81,29 @@ body::before{
     width: auto;
     background-color: black;
     border-radius: 50px;
+    box-shadow:
+            0 0 5px #fff,
+            0 0 8px #0ff,
+            0 0 10px #0ff,
+            0 0 20px #0ff,
+            0 0 40px #0088ff,
+            0 0 80px #0088ff,
+            0 0 100px #0044ff;;
+}
+
+.card {
+    border: 1px solid #ff00ff; /* pink/purple border */
+    border-radius: 15px;
+    background-color: black; /* dark background for contrast */
+    box-shadow:
+            0 0 2px white,
+            0 0 5px #ff00ff,
+            0 0 10px #ff00ff,
+            0 0 15px #ff00ff;
+}
+
+
+#menuImgCSS img{
+    border: #ff00ff solid 1px;
+    border-radius: 15px;
 }
