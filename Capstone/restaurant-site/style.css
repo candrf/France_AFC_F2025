@@ -8,9 +8,9 @@ Texts and images are bright neon sign styling*/
     border: none;
     box-sizing: border-box;
 }
-
-/* tilt-neon Google font with custom styling for neon glow effect*/
-.tilt-neon {
+/* Tilt-neon Google font with custom styling for neon glow effect.
+Different variations for types of text */
+.tilt-neon-nav {
     font-family: "Tilt Neon", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -50,6 +50,31 @@ Texts and images are bright neon sign styling*/
             0 0 20px #ff00ff,
             0 0 40px #ff00ff
 }
+.tilt-neon-h1-form {
+    font-family: "Tilt Neon", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    color: white;
+    text-shadow:
+            0 0 10px #ff0000,
+            0 0 20px #ff0000,
+            0 0 40px #ff0000,
+            0 0 80px #ff0000;
+}
+.tilt-neon-form {
+    font-family: "Tilt Neon", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: white;
+    text-shadow:
+            0 0 10px #000000,
+            0 0 20px #ff0000
+}
+/* Background img*/
 body{
     position: relative;
     min-height: 100vh;
@@ -66,10 +91,12 @@ body::before{
     background-size: cover;
     z-index: -1;
 }
+/* sizing for brand img*/
 .navbar-brand img{
     height: 60px;
     width: auto;
 }
+/* Center div for home page img, add neon effect*/
 #homePage{
     display: flex;
     justify-content: center;
@@ -90,20 +117,32 @@ body::before{
             0 0 80px #0088ff,
             0 0 100px #0044ff;;
 }
-
-.card {
-    border: 1px solid #ff00ff; /* pink/purple border */
+/* Shape menu and add neon effect*/
+#menu {
+    border: 1px solid #ff00ff;
     border-radius: 15px;
-    background-color: black; /* dark background for contrast */
+    background-color: black;
     box-shadow:
             0 0 2px white,
             0 0 5px #ff00ff,
             0 0 10px #ff00ff,
             0 0 15px #ff00ff;
 }
-
-
-#menuImgCSS img{
+/* Force images to fit size */
+.menuImage{
     border: #ff00ff solid 1px;
     border-radius: 15px;
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    object-fit: cover;
+}
+/* Shape form and add neon effects*/
+#form_div{
+    border: 1px solid #ff0000;
+    border-radius: 15px;
+    box-shadow:
+            0 0 2px white,
+            0 0 5px #ff0000,
+            0 0 10px #ff0000;
 }

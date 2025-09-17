@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <!-- Nav Bar-->
         <nav class="navbar navbar-expand-lg bg-black">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
@@ -21,7 +22,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav tilt-neon">
+                    <div class="navbar-nav tilt-neon-nav">
                         <a class="nav-link" href="index.html">Home</a>
                         <a class="nav-link" href="menu.html">Menu</a>
                         <a class="nav-link active" aria-current="page" href="#">Hiring</a>
@@ -30,74 +31,127 @@
             </div>
         </nav>
 
-        <h1>Employment Application</h1>
+        <!-- Form Start -->
+        <div class="container mt-4 bg-black" id="form_div">
+            <h1 class="tilt-neon-h1-form mb-4">Employment Application</h1>
+            <form action="#" method="post" class="tilt-neon-form" id="form">
+                <!-- First Name -->
+                <div class="mb-3">
+                    <label for="fname" class="form-label">First Name:</label>
+                    <input type="text" class="form-control" name="fname" id="fname"
+                           minlength="1" maxlength="20" required>
+                </div>
+                <!-- Last Name -->
+                <div class="mb-3">
+                    <label for="lname" class="form-label">Last Name:</label>
+                    <input type="text" class="form-control" name="lname" id="lname"
+                           minlength="1" maxlength="20">
+                </div>
+                <!-- Address 1 -->
+                <div class="mb-3">
+                    <label for="address1" class="form-label">Address 1:</label>
+                    <input type="text" class="form-control" name="address1" id="address1"
+                           required>
+                </div>
+                <!-- Address 2 -->
+                <div class="mb-3">
+                    <label for="address2" class="form-label">Address 2:</label>
+                    <input type="text" class="form-control" name="address2" id="address2">
+                </div>
+                <!-- City -->
+                <div class="mb-3">
+                    <label for="city" class="form-label">City:</label>
+                    <input type="text" class="form-control" name="city" id="city"
+                           maxlength="29" required>
+                </div>
+                <!-- State -->
+                <div class="mb-3">
+                    <label for="state" class="form-label">State:</label>
+                    <select class="form-select" name="state" id="state">
+                        <option value="TX">TX</option>
+                        <option value="OK">OK</option>
+                        <option value="GA">GA</option>
+                    </select>
+                </div>
+                <!-- Age (js validation) -->
+                <div class="mb-3">
+                    <label for="age" class="form-label">Age:</label>
+                    <input type="number" class="form-control" name="age" id="age">
+                    <div id="ageError"></div>
+                </div>
+                <!-- Phone (js validation) -->
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number:</label>
+                    <input type="tel" class="form-control" name="phone" id="phone">
+                    <div id="phoneError"></div>
+                </div>
+                <!-- Email -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+                <!-- Password -->
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password:</label>
+                    <input type="password" class="form-control" name="password" id="password"
+                           pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&?]).{8,12}$"
+                           required>
+                </div>
+                <!-- Married -->
+                <div class="mb-3">
+                    <label class="form-label">Are you married?</label>
+                    <div class="form-check">
+                        <label class="form-check-label" for="marriedYes">Yes</label>
+                        <input class="form-check-input" type="radio" name="isMarried" id="marriedYes" value="Yes">
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label" for="marriedNo">No</label>
+                        <input class="form-check-input" type="radio" name="isMarried" id="marriedNo" value="No" checked>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label" for="marriedComplicated">It’s Complicated</label>
+                        <input class="form-check-input" type="radio" name="isMarried" id="marriedComplicated" value="It's Complicated">
+                    </div>
+                </div>
+                <!-- Fav Colors -->
+                <div class="mb-3">
+                    <label class="form-label">Favorite Color:</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="colorRed" name="colors" value="red">
+                        <label class="form-check-label" for="colorRed">Red</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="colorGreen" name="colors" value="green">
+                        <label class="form-check-label" for="colorGreen">Green</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="colorBlue" name="colors" value="blue">
+                        <label class="form-check-label" for="colorBlue">Blue</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="colorIndigo" name="colors" value="indigo">
+                        <label class="form-check-label" for="colorIndigo">Indigo</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="colorViolet" name="colors" value="violet">
+                        <label class="form-check-label" for="colorViolet">Violet</label>
+                    </div>
+                </div>
+                <!-- More Info (js validation)-->
+                <div class="mb-3">
+                    <label for="moreInfo" class="form-label">Enter more information about yourself</label>
+                    <div id="charCount"></div>
+                    <textarea name="moreInfo" class="form-control" id="moreInfo" rows="4" maxlength="30"></textarea>
+                </div>
+                <!-- Buttons -->
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-danger">Submit</button>
+                    <button type="reset" class="btn btn-danger">Reset</button>
+                </div>
+            </form>
+        </div>
 
-        <form action="" method="get">
-                <label for="fname">First Name:</label>
-                <input type="text" name="fname" id="fname"
-                        minlength="1" maxlength="20" required>
-                <br>
-                <label for="lname">Last Name:</label>
-                <input type="text" name="lname" id="lname"
-                        minlength="1" maxlength="20">
-                <br>
-                <label for="address1">Address 1:</label>
-                <input type="text" name="address1" id="address1"
-                        required>
-                <br>
-                <label for="address2">Address 2:</label>
-                <input type="text" name="address1" id="address2">
-                <br>
-                <label for="city">City:</label>
-                <input type="text" name="city" id="city"
-                        maxlength="29" required>
-
-                <label for="state">State:</label>
-                <select name="state" id="state">
-                    <option value="TX">TX</option>
-                    <option value="OK">OK</option>
-                    <option value="GA">GA</option>
-                </select>
-                <br>
-                <label for="age">Age:</label>
-                <input type="number" name="age" id="age"
-                        min="21" max="99" required>
-                <br>
-                <label for="phone">Phone Number:</label>
-                <input type="tel" name="phone" id="phone"
-                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                        placeholder="Format: 123-456-7891"
-                        required>
-                <br>
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" required>
-                <br>
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password"
-                       pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]).{8,12}$"
-                       required>
-                <br>
-                <label>Are you married?:
-                    <input type="radio" name="isMarried" value="Yes" >Yes
-                    <input type="radio" name="isMarried" value="No" checked>No
-                    <input type="radio" name="isMarried" value="It's Complicated">It's Complicated
-                </label>
-                <br>
-                <label>Favorite Color:
-                    <input type="checkbox" name="colors" value="red">Red
-                    <input type="checkbox" name="colors" value="green">Green
-                    <input type="checkbox" name="colors" value="blue">Blue
-                    <input type="checkbox" name="colors" value="indigo">Indigo
-                    <input type="checkbox" name="colors" value="violet">Violet
-                </label>
-                <br>
-                <label for="moreInfo">Enter more information about yourself</label>
-                <br>
-                <textarea name="moreInfo" id="moreInfo" rows="4" maxlength="30"></textarea>
-                <br>
-                <button type="submit">Submit</button>
-                <button type="reset">Reset</button>
-        </form>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
     </body>
 </html>
