@@ -1,0 +1,76 @@
+/**{*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    border: none;*/
+/*    box-sizing: border-box;*/
+/*    font-family: "Monsieur La Doulaise", cursive;*/
+/*}*/
+/*body{*/
+/*    background-color: rgb(229, 232, 236);*/
+/*}.monsieur-la-doulaise-regular {*/
+/*     font-family: "Monsieur La Doulaise", cursive;*/
+/*     font-weight: 400;*/
+/*     font-style: normal;*/
+/* }*/
+
+p{
+    background-color: #57c185;
+    width: 50%;
+    margin: 10px auto;
+    border-style: ridge;
+    border-color: aqua;
+    border-width: medium;
+    font-family: "Monsieur La Doulaise", cursive;
+}
+h1:hover {
+    background-color: purple;
+}
+button:hover{
+    color: blue;
+}
+input:hover{
+    border: 10px solid black
+}
+button:active{
+    background-color: mediumseagreen;
+}
+
+a[target=_blank]:link{
+    color: blue;
+}
+
+a[target=_blank]:visited{
+    color: purple;
+}
+
+.div1{
+    height: 200px;
+    width: 200px;
+    background-color: green;
+    position: relative;
+    top: 100px;
+    left: 100px;
+    z-index: 0;
+}
+.div2{
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+}
+.container{
+    height: 300px;
+    width: 300px;
+    background-color: grey;
+    position: relative;
+}
+.innerDiv{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    position: absolute;
+    bottom: 0px;
+}
+.fa-solid{
+    color: purple;
+    font-size: 200px;
+}

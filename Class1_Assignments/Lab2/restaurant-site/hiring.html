@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Now Hiring</title>
+        <link rel="icon" href="images/burger-favicon.jpg" type="image/png">
+    </head>
+    <body>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="hiring.html">Now Hiring</a>
+        </nav>
+
+        <h1>Employment Application</h1>
+
+        <form action="" method="get">
+                <label for="fname">First Name:</label>
+                <input type="text" name="fname" id="fname"
+                        minlength="1" maxlength="20" required>
+                <br>
+                <label for="lname">Last Name:</label>
+                <input type="text" name="lname" id="lname"
+                        minlength="1" maxlength="20">
+                <br>
+                <label for="address1">Address 1:</label>
+                <input type="text" name="address1" id="address1"
+                        required>
+                <br>
+                <label for="address2">Address 2:</label>
+                <input type="text" name="address1" id="address2">
+                <br>
+                <label for="city">City:</label>
+                <input type="text" name="city" id="city"
+                        maxlength="29" required>
+
+                <label for="state">State:</label>
+                <select name="state" id="state">
+                    <option value="TX">TX</option>
+                    <option value="OK">OK</option>
+                    <option value="GA">GA</option>
+                </select>
+                <br>
+                <label for="age">Age:</label>
+                <input type="number" name="age" id="age"
+                        min="21" max="99" required>
+                <br>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" name="phone" id="phone"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                        placeholder="Format: 123-456-7891"
+                        required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password"
+                       pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]).{8,12}$"
+                       required>
+                <br>
+                <label>Are you married?:
+                    <input type="radio" name="isMarried" value="Yes" >Yes
+                    <input type="radio" name="isMarried" value="No" checked>No
+                    <input type="radio" name="isMarried" value="It's Complicated">It's Complicated
+                </label>
+                <br>
+                <label>Favorite Color:
+                    <input type="checkbox" name="colors" value="red">Red
+                    <input type="checkbox" name="colors" value="green">Green
+                    <input type="checkbox" name="colors" value="blue">Blue
+                    <input type="checkbox" name="colors" value="indigo">Indigo
+                    <input type="checkbox" name="colors" value="violet">Violet
+                </label>
+                <br>
+                <label for="moreInfo">Enter more information about yourself</label>
+                <br>
+                <textarea name="moreInfo" id="moreInfo" rows="4" maxlength="30"></textarea>
+                <br>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+        </form>
+    </body>
+</html>

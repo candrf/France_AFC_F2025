@@ -1,0 +1,12 @@
+utilize endpoint
+receive data
+if good - parse it
+else throw error
+do something with parsed data
+handle errors
+
+fetch scaffolding
+    fetch(url)
+    .then(incoming data)    all the .thens are called promises
+    .then(parsedData)
+    .catch()errors
