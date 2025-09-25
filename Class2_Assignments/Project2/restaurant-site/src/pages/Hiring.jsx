@@ -1,6 +1,11 @@
+import AppNavbar from "../components/AppNavbar";
+
 function Hiring (){
     return (
-        <h1>Hiring page</h1>
+        <div>
+            <AppNavbar />
+            <h1>Hiring page</h1>
+        </div>
     )
 }
 

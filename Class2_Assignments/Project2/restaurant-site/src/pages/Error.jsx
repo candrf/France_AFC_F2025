@@ -1,6 +1,12 @@
+import AppNavbar from "../components/AppNavbar";
+
 function Error (){
     return (
-        <h1>Error page</h1>
+        <div>
+            <AppNavbar />
+            <h1>Error page</h1>
+        </div>
+
     )
 }
 

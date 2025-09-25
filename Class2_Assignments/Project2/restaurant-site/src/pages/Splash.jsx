@@ -1,7 +1,12 @@
+import AppNavbar from "../components/AppNavbar";
+
+
 function Splash (){
     return (
         <div>
-            <h1>Splash Page</h1>
+            <AppNavbar />
+            <h1>Welcome!</h1>
+            <img src="src/assets/images/neon-burger-home.png" alt="Neon sign for Andrew's Burgers" />
         </div>
     );
 }
