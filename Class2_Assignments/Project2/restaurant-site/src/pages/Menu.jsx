@@ -33,6 +33,7 @@ function Menu (){
         <div>
             <AppNavbar />
             <h1>Menu page</h1>
+            {/*            ↓  this is a prop */}
             <MenuTable menuItems={menuItems} />
         </div>
     );

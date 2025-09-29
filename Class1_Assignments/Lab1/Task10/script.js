@@ -1,4 +1,4 @@
-// script.js
+// index.js
 // Name: Andrew France
 // Task10 - How Long Until Graduation
 

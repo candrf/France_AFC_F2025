@@ -1,4 +1,4 @@
-// script.js
+// index.js
 // Name: Andrew France
 // Lab2 - Simple Interest Calculator
 

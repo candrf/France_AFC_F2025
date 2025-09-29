@@ -1,4 +1,4 @@
-const isPalindrome = require("./script");
+const isPalindrome = require("./index");
 
 // 1. Function Requirements
 // The isPalindrome function must exist and accept exactly one argument.

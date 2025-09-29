@@ -1,8 +1,10 @@
 import {Table} from "reactstrap";
 
-function MenuTable({menuItems}) {
 
+//                     ↓ destructuring the prop to use data
+function MenuTable({menuItems}) {
     return(
+        // Uses reactstrap table
         <Table >
             <thead>
                 <tr>
@@ -13,8 +15,9 @@ function MenuTable({menuItems}) {
                 </tr>
             </thead>
             <tbody>
-            {menuItems.map((menuItem, i) => (
-                <tr key={i}>
+            {/**/}
+            {menuItems.map((menuItem, index) => (
+                <tr key={index}>
                     <td>
                         <img src={menuItem.image}
                              alt={menuItem.name}
