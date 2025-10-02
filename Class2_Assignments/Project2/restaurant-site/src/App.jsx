@@ -1,21 +1,18 @@
-import { Routes, Route, Link } from "react-router-dom";
-import Splash from "./pages/Splash";
-import Menu from "./pages/Menu";
-import Hiring from "./pages/Hiring";
-import Error from "./pages/Error";
+import {Outlet} from "react-router-dom";
+import AppNavbar from "./components/AppNavbar.jsx";
 
 function App() {
+
+// App acts as the layout page.
+// Loads NavBar on every page and uses Outlet to render current route
     return (
         <>
-            <Routes>
-              <Route path="/" element={<Splash />} />
-              <Route path="/menu" element={<Menu />} />
-              <Route path="/hiring" element={<Hiring />} />
-              <Route path="*" element={<Error />} />
-            </Routes>
+            <AppNavbar/>
+            <main>
+                <Outlet/>
+            </main>
         </>
     )
 }
-
 
 export default App;

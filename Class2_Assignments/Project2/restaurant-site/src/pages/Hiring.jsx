@@ -1,11 +1,10 @@
-import AppNavbar from "../components/AppNavbar";
+import HiringForm from "../components/HiringForm.jsx";
 
 function Hiring (){
     return (
-        <div>
-            <AppNavbar />
-            <h1>Hiring page</h1>
-        </div>
+        <>
+            <HiringForm/>
+        </>
     )
 }
 
