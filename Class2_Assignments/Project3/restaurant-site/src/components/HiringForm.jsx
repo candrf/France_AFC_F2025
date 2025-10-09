@@ -1,4 +1,4 @@
-import {FormGroup, Label, Input, Col, FormText, Form} from "reactstrap";
+import {FormGroup, Label, Input, Col, FormText, Form, Button} from "reactstrap";
 import {useForm} from "react-hook-form";
 import { yupResolver} from "@hookform/resolvers/yup";
 import {number, object, string} from "yup";
@@ -73,11 +73,13 @@ function HiringForm() {
             }}
     );
 
+    // output to console as JSON then reset
     const onSubmit = (data) =>{
         console.log(JSON.stringify(data));
         reset();
     };
 
+    // single change handler for every input
     const handleChange = (event) => {
         setValue(event.target.name, event.target.value);
     }
@@ -97,6 +99,7 @@ function HiringForm() {
                         {...register("fname")}
                         onChange={handleChange}
                     />
+                    {/*dynamic error messages for every input*/}
                     {errors.fname && <FormText color="danger">{errors.fname.message}</FormText>}
                 </FormGroup>
 
@@ -245,12 +248,12 @@ function HiringForm() {
 
                 {/*Submit and reset buttons*/}
                 <Col sm={10} className="mt-2">
-                    <button color="secondary" type="submit" className="me-2">
+                    <Button color="secondary" type="submit" className="me-2">
                         Submit
-                    </button>
-                    <button color="secondary" type="reset">
+                    </Button>
+                    <Button color="secondary" type="reset">
                         Reset
-                    </button>
+                    </Button>
                 </Col>
             </Form>
         </>
