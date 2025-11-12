@@ -1,0 +1,91 @@
+:root {
+    --bg: #f9fafb;/* Background is an off-white color*/
+    --text-primary:#101828 ;/* Primary text is black, but with some blue mixed in*/
+    --text-secondary:#4a5565 ;/* Secondary text is a bluish-grey*/
+    --navbar-bg:#ffffff ;/* Navbar background is white*/
+    --border:#dedfe0 ;/* Border between navbar and main page is off-white/light-grey*/
+    --navbar-hover:#f3f4f6 ;/* Navbar hover over button is grey*/
+    --button-bg:#030213 ;/* Button background is nearly pure black*/
+    --button-text:#ffffff ;/* Button text is white*/
+    --card-bg:#ffffff ;/* Card background is white*/
+    --card-border:#e5e5e5  ;/* Card border is light-grey */
+    --search:#f3f3f5 ;/* Searchbar is light-grey */
+    --modal-bg:#ffffff /* Modal background is white*/
+}
+
+body {
+    background-color: var(--bg) !important;
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+p {
+    color: var(--text-secondary);
+}
+
+.myButton{
+    background-color: var(--button-bg) !important;
+    color: var(--button-text) !important;
+}
+
+.myButton2{
+    background-color: var(--card-bg) !important;
+    color: var(--text-primary) !important;
+}
+
+.brand{
+    height: 35px;
+    width: 35px;
+    border-radius: 5px;
+    border: var(--border) solid 1px;
+}
+
+.logo {
+    height: 350px;
+    width: 350px;
+    border-radius: 10px;
+    border: var(--border) solid 4px;
+
+}
+
+/* NavBar colors*/
+a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.active-link {
+    background-color: var(--button-bg);
+    color: var(--button-text) !important;
+    border-radius: 0.75rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.inactive-link {
+    color: var(--text-primary);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.inactive-link:hover {
+    background-color: var(--navbar-hover);
+    border-radius: 0.75rem;
+}
+
+
+.cardImg {
+    height: 175px;
+    width: 175px;
+    border-radius: 10px;
+    border: var(--border) solid 4px;
+}
+
+.myCard{
+    width: 18rem;
+    padding: .75rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--card-border);
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+}
+
