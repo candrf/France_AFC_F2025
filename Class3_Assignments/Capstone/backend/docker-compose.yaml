@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  postgres-db:
+    container_name: capstone-postgres
+    image: postgres # use latest official postgres version
+    restart: always
+    environment:
+      POSTGRES_USER: capstone
+      POSTGRES_PASSWORD: capstone
+      POSTGRES_DB: capstone_db
+      POSTGRES_HOST_AUTH_METHOD: password
+    ports:
+      - "5432:5432" # outside port, inside port
+
+    volumes:
+      - ./postgresql_data:/var/lib/postgresql/data
+
+volumes:
+  postgresql_data:
+    driver: local
