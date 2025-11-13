@@ -1,26 +1,62 @@
 import {Button, Modal, ModalBody, ModalFooter, ModalHeader} from "reactstrap";
 
 function ViewItemModal({item, open, onClose}){
+    if(!item) return null
 
     return(
         <>
             <Modal isOpen={open}>
-                <ModalHeader >Modal title</ModalHeader>
+                <ModalHeader >{"More Info: " + item.name}</ModalHeader>
                 <ModalBody>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
+                    {item.imageUrl && (
+                        <div className="text-center mb-3">
+                            <img
+                                src={item.imageUrl}
+                                alt={item.name}
+                                className={"cardImg"}
+                            />
+                        </div>
+                    )}
+                    <dl className="row mb-0">
+                        <dt className="col-sm-4">Blurb:</dt>
+                        <dd className="col-sm-8">{item.blurb || "—"}</dd>
+
+                        <dt className="col-sm-4">Rating:</dt>
+                        <dd className="col-sm-8">{item.rating ?? "—"}</dd>
+
+                        <dt className="col-sm-4">Quantity:</dt>
+                        <dd className="col-sm-8">{item.quantity ?? "—"}</dd>
+
+                        <dt className="col-sm-4">Price:</dt>
+                        <dd className="col-sm-8">${item.price?.toFixed(2) ?? "—"}</dd>
+
+                        <dt className="col-sm-4">Slug:</dt>
+                        <dd className="col-sm-8">{item.slug || "—"}</dd>
+
+                        <dt className="col-sm-4">Color:</dt>
+                        <dd className="col-sm-8">
+                            {`${item.color.colorLabel}: ${item.color.colorHex} (${item.color.colorCode})`}
+                        </dd>
+
+                        <dt className="col-sm-4">Lifecycle:</dt>
+                        <dd className="col-sm-8">
+                            {item.lifecycle?.lifecycleStatus || "—"}
+                        </dd>
+
+                        <dt className="col-sm-4">Created:</dt>
+                        <dd className="col-sm-8">
+                            {new Date(item.createdAt).toLocaleString() || "—"}
+                        </dd>
+
+                        <dt className="col-sm-4">Updated:</dt>
+                        <dd className="col-sm-8">
+                            {new Date(item.updatedAt).toLocaleString() || "—"}
+                        </dd>
+                    </dl>
                 </ModalBody>
                 <ModalFooter>
-                    <Button color="primary" >
-                        Do Something
-                    </Button>{' '}
-                    <Button color="secondary" onClick={onClose}>
-                        Cancel
+                    <Button className={"myButton"} onClick={onClose} >
+                        Return
                     </Button>
                 </ModalFooter>
             </Modal>

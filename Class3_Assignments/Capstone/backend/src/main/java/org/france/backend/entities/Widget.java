@@ -17,14 +17,11 @@ public class Widget {
     private String slug;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+    private String imageUrl;
 
     @ManyToOne
     @JoinColumn(name = "color_id")
     private Color color;
-
-    @ManyToOne
-    @JoinColumn(name = "image_id")
-    private Image image;
 
     @ManyToOne
     @JoinColumn(name = "lifecycle_id")
@@ -113,19 +110,19 @@ public class Widget {
         this.color = color;
     }
 
-    public Image getImage() {
-        return image;
-    }
-
-    public void setImage(Image image) {
-        this.image = image;
-    }
-
     public Lifecycle getLifecycle() {
         return lifecycle;
     }
 
     public void setLifecycle(Lifecycle lifecycle) {
         this.lifecycle = lifecycle;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }

@@ -18,14 +18,13 @@ function InventoryCard({item, onViewItem, onEditItem}){
 
                         <img className={"cardImg mt-2"}
                              alt="Sample"
-                             src="https://picsum.photos/300/200"
+                             src={item.imageUrl}
                         />
-
                         <CardText className={"mt-2"}>
                             Price: {item.price}
                         </CardText>
                         <CardText >
-                            Stock: {item.stock}
+                            Stock: {item.quantity}
                         </CardText>
                         <div className={"container"}>
                             <div className={"d-flex gap-2 mt-3"}>
