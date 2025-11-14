@@ -14,6 +14,8 @@ services:
 
     volumes:
       - postgresql_data:/var/lib/postgresql/data/18
+      # something is going on with docker, anythin 18+ wants an additional path after /data
+      # if using an older version deleting the 18 should work
 
 volumes:
   postgresql_data:
