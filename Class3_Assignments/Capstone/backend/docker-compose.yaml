@@ -2,7 +2,7 @@ version: "3.8"
 services:
   postgres-db:
     container_name: capstone-postgres
-    image: postgres # use latest official postgres version
+    image: postgres:17
     restart: always
     environment:
       POSTGRES_USER: capstone
@@ -13,9 +13,9 @@ services:
       - "5432:5432" # outside port, inside port
 
     volumes:
-      - postgresql_data:/var/lib/postgresql/data/18
-      # something is going on with docker, anythin 18+ wants an additional path after /data
-      # if using an older version deleting the 18 should work
+      - capstone_france_data:/var/lib/postgresql/data
+      # something is going on with docker, anything 18+ wants an additional path after /data
+      # I'm specifying that docker using version 17 for images
 
 volumes:
-  postgresql_data:
+  capstone_france_data:
